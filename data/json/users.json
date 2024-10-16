@@ -1,0 +1,142 @@
+[
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "name": "Juan Pérez",
+      "email": "juan.perez@example.com",
+      "birthdate": "1985-06-15",
+      "phone": "+1234567890",
+      "address": {
+        "street": "Calle Falsa 123",
+        "city": "Ciudad de México",
+        "country": "México"
+      },
+      "isActive": true,
+      "roles": ["admin", "user"]
+    },
+    {
+      "id": "660e8410-f39b-41e4-b716-556665551111",
+      "name": "María López",
+      "email": "maria.lopez@example.com",
+      "birthdate": "1990-09-22",
+      "phone": "+9876543210",
+      "address": {
+        "street": "Avenida Siempre Viva 742",
+        "city": "Buenos Aires",
+        "country": "Argentina"
+      },
+      "isActive": false,
+      "roles": ["user"]
+    },
+    {
+      "id": "770e8420-g49b-42f4-c816-667775662222",
+      "name": "Carlos Gómez",
+      "email": "carlos.gomez@example.com",
+      "birthdate": "1978-12-03",
+      "phone": "+5432167890",
+      "address": {
+        "street": "Carrera 50 #20-30",
+        "city": "Bogotá",
+        "country": "Colombia"
+      },
+      "isActive": true,
+      "roles": ["user", "moderator"]
+    },
+    {
+      "id": "880e8430-h59b-43g4-d916-778885773333",
+      "name": "Ana Ramírez",
+      "email": "ana.ramirez@example.com",
+      "birthdate": "1992-11-18",
+      "phone": "+5432167891",
+      "address": {
+        "street": "Calle 5 #45-10",
+        "city": "Lima",
+        "country": "Perú"
+      },
+      "isActive": true,
+      "roles": ["user"]
+    },
+    {
+      "id": "990e8440-i69b-44h4-e916-889995884444",
+      "name": "Luis Fernández",
+      "email": "luis.fernandez@example.com",
+      "birthdate": "1983-04-25",
+      "phone": "+5432167892",
+      "address": {
+        "street": "Calle Los Olivos 234",
+        "city": "Santiago",
+        "country": "Chile"
+      },
+      "isActive": true,
+      "roles": ["admin"]
+    },
+    {
+      "id": "aa0e8450-j79b-45i4-f916-9900aa995555",
+      "name": "Sofía Torres",
+      "email": "sofia.torres@example.com",
+      "birthdate": "1995-01-12",
+      "phone": "+5432167893",
+      "address": {
+        "street": "Rua das Flores 567",
+        "city": "São Paulo",
+        "country": "Brasil"
+      },
+      "isActive": false,
+      "roles": ["user"]
+    },
+    {
+      "id": "bb0e8460-k89b-46j4-g916-aab1bb996666",
+      "name": "Andrés García",
+      "email": "andres.garcia@example.com",
+      "birthdate": "1987-07-30",
+      "phone": "+5432167894",
+      "address": {
+        "street": "Calle del Sol 890",
+        "city": "Caracas",
+        "country": "Venezuela"
+      },
+      "isActive": true,
+      "roles": ["user", "moderator"]
+    },
+    {
+      "id": "cc0e8470-l99b-47k4-h916-bbc2cc997777",
+      "name": "Lucía Rojas",
+      "email": "lucia.rojas@example.com",
+      "birthdate": "1991-05-08",
+      "phone": "+5432167895",
+      "address": {
+        "street": "Carrera 15 #30-20",
+        "city": "Medellín",
+        "country": "Colombia"
+      },
+      "isActive": true,
+      "roles": ["user"]
+    },
+    {
+      "id": "dd0e8480-m09b-48l4-i916-ccd3dd998888",
+      "name": "Fernando Castillo",
+      "email": "fernando.castillo@example.com",
+      "birthdate": "1980-10-14",
+      "phone": "+5432167896",
+      "address": {
+        "street": "Avenida Libertador 456",
+        "city": "Quito",
+        "country": "Ecuador"
+      },
+      "isActive": false,
+      "roles": ["user"]
+    },
+    {
+      "id": "ee0e8490-n19b-49m4-j916-dde4ee999999",
+      "name": "Valeria Morales",
+      "email": "valeria.morales@example.com",
+      "birthdate": "1989-02-22",
+      "phone": "+5432167897",
+      "address": {
+        "street": "Avenida San Martín 321",
+        "city": "Asunción",
+        "country": "Paraguay"
+      },
+      "isActive": true,
+      "roles": ["admin", "user"]
+    }
+  ]

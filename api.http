@@ -1,0 +1,73 @@
+### Recuperar todas las películas
+GET http://localhost:3000/movies
+
+### Recuperar una película por id
+GET http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+### Recuperar todas las películas por un género
+GET http://localhost:3000/movies?genre=Drama
+
+### Crear una película con POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "The Godfather",
+  "year": 1975,
+  "director": "Francis Ford Coppola",
+  "duration": 175,
+  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+  "genre": [
+    "Crime",
+    "Drama"
+  ]
+}
+
+### Borrar una película
+DELETE http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+### Actualizar una película
+PATCH http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+Content-Type: application/json
+
+{
+  "year": 2022
+}
+
+### Recuperar todos los usuarios
+GET http://localhost:3000/users
+
+### Recuperar un usuario por id
+GET http://localhost:3000/users/670ff26b51a27263bfe0d007
+
+### Recuperar todas los usuarios por un rol
+GET http://localhost:3000/users?role=admin
+
+### Crear un usuario con POST
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Enoel Ramirez",
+  "email": "enoel@example.com",
+  "birthdate": "1987-11-02",
+  "phone": "+5548991265264",
+  "address": {
+    "street": "Rua Joao Patricio",
+    "city": "Florianopolis",
+    "country": "Brazil"
+  },
+  "isActive": true,
+  "roles": ["admin", "user"]
+}
+
+### Borrar un usuario
+DELETE http://localhost:3000/users/670ff26b51a27263bfe0d007
+
+### Actualizar un usuario
+PATCH http://localhost:3000/users/670ff26b51a27263bfe0d007
+Content-Type: application/json
+
+{
+  "phone": "+55489912652641"
+}
