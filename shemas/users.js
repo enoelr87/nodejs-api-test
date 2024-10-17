@@ -8,11 +8,7 @@ const userSchema = z.object({
   email: z.string().email(),
   birthdate: z.string().date(),
   phone: z.string(),
-  address: z.object({
-    street: z.string(),
-    city: z.string(),
-    country: z.string()
-  }),
+  address: z.string(),
   isActive: z.boolean(),
   roles: z.array(
     z.enum(['admin', 'user']),

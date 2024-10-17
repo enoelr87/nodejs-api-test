@@ -1,19 +1,20 @@
 import express, { json } from 'express'
 import { moviesRouter } from './routes/movies.js'
-import { usersRouter } from './routes/users.js'
+import { createUserRouter } from './routes/users.js'
 import { corsMiddleware } from './middlewares/cors.js'
 
-const PORT = process.env.PORT ?? 3000
+export const createApp = ({ userModel }) => {
+  const app = express()
+  app.use(json())
+  app.disable('x-powered-by')
+  app.use(corsMiddleware())
 
-const app = express()
-app.disable('x-powered-by')
-app.use(corsMiddleware())
+  // app.use('/movies', moviesRouter)
+  app.use('/users', createUserRouter({ userModel }))
 
-app.use(json())
+  const PORT = process.env.PORT ?? 3000
 
-app.use('/movies', moviesRouter)
-app.use('/users', usersRouter)
-
-app.listen(PORT, () => {
-  console.log(`server listening on http://localhost:${PORT}`)
-})
+  app.listen(PORT, () => {
+    console.log(`server listening on http://localhost:${PORT}`)
+  })
+}

@@ -38,10 +38,10 @@ Content-Type: application/json
 GET http://localhost:3000/users
 
 ### Recuperar un usuario por id
-GET http://localhost:3000/users/670ff26b51a27263bfe0d007
+GET http://localhost:3000/users/625b4653-8c24-11ef-8511-00d861e0dd9e
 
 ### Recuperar todas los usuarios por un rol
-GET http://localhost:3000/users?role=admin
+GET http://localhost:3000/users?role=user
 
 ### Crear un usuario con POST
 POST http://localhost:3000/users
@@ -52,17 +52,13 @@ Content-Type: application/json
   "email": "enoel@example.com",
   "birthdate": "1987-11-02",
   "phone": "+5548991265264",
-  "address": {
-    "street": "Rua Joao Patricio",
-    "city": "Florianopolis",
-    "country": "Brazil"
-  },
+  "address": "Rua Joao Patricio, Florianopolis Brazil",
   "isActive": true,
   "roles": ["admin", "user"]
 }
 
 ### Borrar un usuario
-DELETE http://localhost:3000/users/670ff26b51a27263bfe0d007
+DELETE http://localhost:3000/users/e0b6b698-8c2a-11ef-8511-00d861e0dd9e
 
 ### Actualizar un usuario
 PATCH http://localhost:3000/users/670ff26b51a27263bfe0d007
