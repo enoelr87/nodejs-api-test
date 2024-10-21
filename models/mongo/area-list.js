@@ -1,4 +1,4 @@
-import { connectMongoDB } from './connect-db.js'
+import { connectMongoDB } from '../../database/connect-db.js'
 
 export class AreaListModel {
   static async getAll () {

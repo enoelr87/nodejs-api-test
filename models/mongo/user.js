@@ -1,5 +1,5 @@
 import { ObjectId } from 'mongodb'
-import { connectMongoDB } from './connect-db.js'
+import { connectMongoDB } from '../../database/connect-db.js'
 
 export class UserModel {
   static async getAll ({ role }) {
