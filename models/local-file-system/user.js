@@ -15,7 +15,14 @@ export class UserModel {
   }
 
   static async getById ({ id }) {
-    const user = users.find(user => user.id === id)
+    const userData = users.find(user => user.id === id)
+    const { password, ...user } = userData
+    return user
+  }
+
+  static async getByUsername ({ username }) {
+    const userData = users.find(user => user.username === username)
+    const { password, ...user } = userData
     return user
   }
 
@@ -39,7 +46,7 @@ export class UserModel {
   }
 
   static async update ({ id, input }) {
-    const userIndex = users.findIndex(movie => movie.id === id)
+    const userIndex = users.findIndex(user => user.id === id)
     if (userIndex === -1) return false
 
     users[userIndex] = {

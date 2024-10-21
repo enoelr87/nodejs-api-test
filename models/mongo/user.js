@@ -13,7 +13,7 @@ const client = new MongoClient(uri, {
 async function connect () {
   try {
     await client.connect()
-    const database = client.db('revalida-sucesso')
+    const database = client.db('estrategia')
     return database.collection('users')
   } catch (error) {
     console.error('Error connecting to the database')
@@ -27,14 +27,7 @@ export class UserModel {
     const db = await connect()
 
     if (role) {
-      return db.find({
-        roles: {
-          $elemMatch: {
-            $regex: role,
-            $options: 'i'
-          }
-        }
-      }).toArray()
+      return db.find({ role: { $regex: new RegExp(role, 'i') } }).toArray()
     }
 
     return db.find({}).toArray()
@@ -44,6 +37,26 @@ export class UserModel {
     const db = await connect()
     const objectId = new ObjectId(id)
     return db.findOne({ _id: objectId })
+  }
+
+  static async getByUsernameAndPassword ({ username, password }) {
+    const db = await connect()
+
+    if (username && password) {
+      const user = await db.findOne({
+        username: { $regex: new RegExp(`^${username}$`, 'i') }
+      })
+      if (user) {
+        // Compara la contraseña ingresada con la almacenada (encriptada)
+        const passwordMatch = password === user.password
+
+        if (passwordMatch) {
+          return user
+        }
+      }
+    }
+
+    return null
   }
 
   static async create ({ input }) {

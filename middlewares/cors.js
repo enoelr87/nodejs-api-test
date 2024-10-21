@@ -1,8 +1,8 @@
 import cors from 'cors'
 
 const ACCEPTED_ORIGINS = [
-  'http://localhost:8080',
-  'http://localhost:1234'
+  'http://localhost:4280',
+  'https://estrategia-medica-course.netlify.app'
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
