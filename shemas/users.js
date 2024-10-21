@@ -22,7 +22,8 @@ const userSchema = z.object({
       required_error: 'User course is required.',
       invalid_type_error: 'User course must be an array of enum Courses'
     }
-  )
+  ),
+  sessionToken: z.string()
 })
 
 const userLoginSchema = z.object({

@@ -5,6 +5,7 @@ import { createCheckListRouter } from './routes/check-list.js'
 import { createAreaListRouter } from './routes/area-list.js'
 import { corsMiddleware } from './middlewares/cors.js'
 import { config } from 'dotenv-safe'
+import { createBaseRouter } from './routes/base.js'
 config()
 
 export const createApp = ({ userModel, areaListModel, checkListModel }) => {
@@ -13,6 +14,7 @@ export const createApp = ({ userModel, areaListModel, checkListModel }) => {
   app.disable('x-powered-by')
   app.use(corsMiddleware())
 
+  app.use(createBaseRouter({ userModel }))
   app.use('/auth', createAuthRouter({ userModel }))
   app.use('/users', createUserRouter({ userModel }))
   app.use('/areaList', createAreaListRouter({ areaListModel }))

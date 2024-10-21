@@ -9,7 +9,7 @@ Content-Type: application/json
 
 ### Recuperar todos los usuarios
 GET http://localhost:3000/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTE3Y2ZjYWQ1YmNkYjEzNzY0YTU0YiIsInVzZXJuYW1lIjoiZW5vZWxyODdAZ21haWwuY29tIiwiaWF0IjoxNzI5MzU0MjY3LCJleHAiOjE3MjkzNTc4Njd9.aqWyNCLkg9Ysdt6kfGPigggfbTiUituDRyB4cxbOwkA
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTE3Y2ZjYWQ1YmNkYjEzNzY0YTU0YiIsInVzZXJuYW1lIjoiZW5vZWxyODdAZ21haWwuY29tIiwiaWF0IjoxNzI5NTI5MjIwLCJleHAiOjE3Mjk1MzI4MjB9.LSvqYmdt_BSo8CHigNNofJN_KPgdIhyRCx1GyqxAbjM
 
 ### Recuperar un usuario por id
 GET http://localhost:3000/users/67117cfcad5bcdb13764a549

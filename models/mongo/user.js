@@ -38,6 +38,21 @@ export class UserModel {
     return null
   }
 
+  static async getBySessionToken ({ sessionToken }) {
+    const db = await connectMongoDB('estrategia', 'users')
+
+    if (sessionToken) {
+      const user = await db.findOne({
+        sessionToken: { $regex: new RegExp(`^${sessionToken}$`, 'i') }
+      })
+      if (user) {
+        return user
+      }
+    }
+
+    return null
+  }
+
   static async create ({ input }) {
     const db = await connectMongoDB('estrategia', 'users')
 

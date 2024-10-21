@@ -17,7 +17,8 @@ export class AuthController {
       const accessToken = jwt.sign({ id: userData._id, username: userData.username }, process.env.SECRET_JWT_KEY, {
         expiresIn: '1h'
       })
-      const { password, ...user } = userData
+      await this.userModel.update({ id: userData._id, input: { sessionToken: accessToken } })
+      const { password, sessionToken, ...user } = userData
       if (user) return res.send({ auth: true, user, accessToken })
     }
 
